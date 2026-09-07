@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Lang Chhay Han</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --accent: #2563eb;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+        }
+
+        .contact-info a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .tab-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .tab-btn:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Content Sections */
+        .tab-content {
+            display: none;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 1.3rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 8px;
+            margin: 25px 0 15px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+            color: var(--text);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .job-sub {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .vacancy-box {
+            background: #eff6ff;
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Lang Chhay Han</h1>
+            <p>Business Administration Undergraduate | Data & Research Analyst</p>
+            <div class="contact-info">
+                <span>Phnom Penh, Cambodia</span> |
+                <a href="mailto:chhayhan.lang@gmail.com">chhayhan.lang@gmail.com</a> |
+                <span>+855 12 345 678</span> |
+                <a href="#">linkedin.com/in/langchhayhan</a>
+            </div>
+        </header>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'cv')">Curriculum Vitae (CV)</button>
+            <button class="tab-btn" onclick="openTab(event, 'vacancy')">Targeted Vacancy</button>
+            <button class="tab-btn" onclick="openTab(event, 'resume')">Tailored Resume</button>
+        </div>
+
+        <!-- 1. CV SECTION -->
+        <div id="cv" class="tab-content active">
+            <div class="section-title">1. Personal Information</div>
+            <ul>
+                <li><strong>Full Name:</strong> Lang Chhay Han</li>
+                <li><strong>Date of Birth:</strong> February 28, 2007</li>
+                <li><strong>Address:</strong> Phnom Penh, Cambodia</li>
+                <li><strong>Email:</strong> chhayhan.lang@gmail.com</li>
+                <li><strong>Phone:</strong> +855 12 345 678</li>
+            </ul>
+
+            <div class="section-title">2. Professional Summary</div>
+            <p>Analytical and research-driven Business Administration undergraduate pursuing a dual degree from the American University of Phnom Penh (AUPP) and the University of Arizona. Demonstrated expertise in applied statistics, digital literacy, market research, and financial tracking. Seeking to leverage strong quantitative problem-solving and project management skills in professional environments.</p>
+
+            <div class="section-title">3. Education</div>
+            <div class="job-header">
+                <span>BS in Business Administration (Dual Degree Program)</span>
+                <span>June 2025 – Present</span>
+            </div>
+            <div class="job-sub">American University of Phnom Penh (AUPP) & University of Arizona</div>
+            <ul>
+                <li>Key Coursework: Business Calculus, Applied Statistics (Chi-Square, Hypothesis Testing, Z-Scores/T-Values), Composition & Research Methodologies, Financial Accounting.</li>
+            </ul>
+
+            <div class="section-title">4. Work & Volunteer Experience</div>
+            <div class="job-header">
+                <span>Event & Operations Volunteer</span>
+                <span>October 2024</span>
+            </div>
+            <div class="job-sub">My First Stock Exhibition (Aeon Mall Phnom Penh)</div>
+            <ul>
+                <li>Assisted in organizing the annual stock exhibition event aimed at raising public financial literacy.</li>
+                <li>Coordinated attendee check-ins, managed logistical setups, and supported financial education booth presentations.</li>
+            </ul>
+
+            <div class="job-header">
+                <span>Student Researcher</span>
+                <span>March 2026 – April 2026</span>
+            </div>
+            <div class="job-sub">Academic Projects (AUPP)</div>
+            <ul>
+                <li>Conducted primary and secondary research on digital literacy, online safety, and economic impacts of scam operations in Cambodia.</li>
+                <li>Developed quantitative models and statistical reporting frameworks for academic research papers.</li>
+            </ul>
+
+            <div class="section-title">5. Skills & Competencies</div>
+            <ul>
+                <li><strong>Data Analysis & Finance:</strong> Applied Statistics, Hypothesis Testing, Google Sheets Advanced Formulas, CSX Trade Platform, Market Analysis.</li>
+                <li><strong>Digital Tools & Productivity:</strong> Airtable Interface Design, Google Workspace, Project Management.</li>
+                <li><strong>Languages:</strong> Khmer (Native), English (Full Professional Proficiency).</li>
+            </ul>
+
+            <div class="section-title">6. Certifications & Workshops</div>
+            <ul>
+                <li><strong>Certificate of Appreciation – Volunteer Service:</strong> My First Stock Exhibition (2024)</li>
+                <li><strong>Participant:</strong> Shareholder General Meetings (CAMGSM PLC / Cellcard) (2025–2026)</li>
+            </ul>
+
+            <div class="section-title">7. References</div>
+            <p>Available upon request.</p>
+        </div>
+
+        <!-- 2. VACANCY ANNOUNCEMENT SECTION -->
+        <div id="vacancy" class="tab-content">
+            <div class="vacancy-box">
+                <h2>Targeted Job Vacancy Announcement</h2>
+                <p><strong>Position:</strong> Junior Business Data & Research Analyst</p>
+                <p><strong>Company:</strong> Local Financial / Telecommunications Institution</p>
+                <p><strong>Location:</strong> Phnom Penh, Cambodia</p>
+            </div>
+
+            <div class="section-title">Job Responsibilities</div>
+            <ul>
+                <li>Assist in gathering, organizing, and analyzing financial and operational data using spreadsheet modeling and statistical tools.</li>
+                <li>Conduct market research, digital literacy trends analysis, and consumer behavior assessments.</li>
+                <li>Collaborate with cross-functional teams to create project dashboards and tracker interfaces.</li>
+                <li>Support preparation of periodic business reports and stakeholder presentations.</li>
+            </ul>
+
+            <div class="section-title">Requirements & Qualifications</div>
+            <ul>
+                <li>Enrolled in or recent graduate of a Bachelor's degree in Business Administration, Finance, Economics, or related fields.</li>
+                <li>Strong proficiency in Microsoft Excel / Google Sheets and statistical data analysis techniques.</li>
+                <li>Demonstrated interest in digital transformation, market analysis, and research methodologies.</li>
+                <li>Excellent written and verbal communication skills in English and Khmer.</li>
+            </ul>
+        </div>
+
+        <!-- 3. RESUME SECTION -->
+        <div id="resume" class="tab-content">
+            <div class="section-title">Objective</div>
+            <p>Detail-oriented Business Administration student with a strong foundation in applied statistics, quantitative analysis, and market research. Seeking to apply data-driven problem-solving and project management skills to support strategic growth as a Junior Business Data & Research Analyst.</p>
+
+            <div class="section-title">Education</div>
+            <div class="job-header">
+                <span>BS in Business Administration (Dual Degree)</span>
+                <span>2025 – Present</span>
+            </div>
+            <div class="job-sub">American University of Phnom Penh & University of Arizona</div>
+            <ul>
+                <li>Relevant Modules: Applied Statistics, Business Calculus, Composition & Research.</li>
+            </ul>
+
+            <div class="section-title">Key Skills & Qualifications</div>
+            <ul>
+                <li><strong>Data Analysis & Modeling:</strong> Advanced Google Sheets, Airtable interface construction, Hypothesis Testing, Z-Scores/T-Values.</li>
+                <li><strong>Market & Equity Research:</strong> Financial tracking, security evaluation via CSX Trade platform, market data synthesis.</li>
+                <li><strong>Project Management & Organization:</strong> Operational setup, workflow tracking, event coordination.</li>
+            </ul>
+
+            <div class="section-title">Relevant Experience</div>
+            <div class="job-header">
+                <span>Student Data & Research Lead</span>
+                <span>2026</span>
+            </div>
+            <div class="job-sub">AUPP Academic Research Projects</div>
+            <ul>
+                <li>Conducted research on digital safety, digital literacy trends, and economic impacts in Cambodia.</li>
+                <li>Structured multi-variable datasets and applied statistical methods to formulate actionable insights.</li>
+            </ul>
+
+            <div class="job-header">
+                <span>Operations Volunteer</span>
+                <span>Oct 2024</span>
+            </div>
+            <div class="job-sub">My First Stock Exhibition (Aeon Mall Phnom Penh)</div>
+            <ul>
+                <li>Managed event logistics, engagement tracking, and attendee inquiries for a major financial exposition.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
